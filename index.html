@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Musical</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="icon" hfre="imagenes/logo.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header>
+        <div class="titulo">
+            <h2>Eco Musical</h2>
+        </div>
+        <nav>
+            <ul>    
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="acercade.html">Más contenido</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+<section >
+    <h2>Pa' Bellakear</h2>
+    <img src="imagenes/chakal.jpeg">
+    <button onclick="location.href='bellakas.html'">Ir a la Playlist</button>
+</section>
+<section>
+    <h2>Corridos Tumbados</h2>
+    <img src="imagenes/tumbados.jpg">
+    <button onclick="location.href='tumbados.html'">Ir a la Playlist</button>
+</section>
+<section>
+    <h2>Norteñas Dolidas</h2>
+    <img src="imagenes/norteñas.jfif">
+    <button onclick="location.href='norteñas.html'">Ir a la Playlist</button>
+</section>
+<section>
+    <h2>Hip Hop</h2>
+    <img src="imagenes/hiphop.webp">
+    <button onclick="location.href='hiphop.html'">Ir a la Playlist</button>
+</section>
+<section>
+    <h2>Cumbias</h2>
+    <img src="imagenes/cumbias.jfif">
+    <button onclick="location.href='cumbias.html'">Ir a la Playlist</button>
+</section>
+<div class="footer1">
+  <section name="footer1"></section>
+</div>
+
+    <footer>
+        <p>&copy; 2024 Eco Musical</p>
+        <p>Has visitado esta página <span class="counter">0</span> veces.</p>
+    </footer>
+
+    <script>
+        let visitCount = localStorage.getItem('visitCount');
+
+        if (visitCount === null) {
+            visitCount = 0;
+        }
+        visitCount++;
+        localStorage.setItem('visitCount', visitCount);
+        document.querySelector('.counter').textContent = visitCount;
+    </script>
+</body>
+</html>
